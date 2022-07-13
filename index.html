@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Laboratorio Calculador de IP</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+
+
+</head>
+<body>
+  <div class="encavezado">
+    <h1>Proyecto Laboratorio IP Calculador </h1>
+  </div>
+  <div class="contenedorgeneral">
+    <div class="contenedor1">
+      <div class="contenedorIP">
+        <h3>Direccion IP</h3>
+        <div class="ip">
+          <input type="text" maxlength="3" name="" value="0" id="octetoA" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name="" value="0" id="octetoB" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name="" value="0" id="octetoC" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name="" value="0" id="octetoD" onkeypress="return soloNumeros(event)">
+          <p>/</p>
+          <input type="text" maxlength="3" name="" value="0" id="mascara" onkeypress="return soloNumeros(event)">
+        </div>
+      </div>
+      <div class="contenedorMascaras">
+        <h3>Mascara de SubRed</h3>
+        <div class="mascara">
+          <input type="text" maxlength="3" name="" id="mascaraA" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name="" id="mascaraB" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name="" id="mascaraC" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name="" id="mascaraD" onkeypress="return soloNumeros(event)">
+        </div>
+
+      </div>
+    </div>
+    <div class="contenedor2">
+      <div class="contenedorresultadosBinarios">
+        <div class="contenedoripbinario">
+          <h3>Direccion IP (Binario)</h3>
+          <div class="ipbinario">
+            <input type="text" maxlength="3" name="" value="0"  id="octetoA_Binario" onkeypress="return soloNumeros(event)">
+            <input type="text" maxlength="3" name="" value="0"  id="octetoB_Binario" onkeypress="return soloNumeros(event)">
+            <input type="text" maxlength="3" name="" value="0"  id="octetoC_Binario" onkeypress="return soloNumeros(event)">
+            <input type="text" maxlength="3" name="" value="0"  id="octetoD_Binario" onkeypress="return soloNumeros(event)">
+          </div>
+        </div>
+        <div class="contenedormascarabinario">
+          <h3>Mascara de SubRed (Binario)</h3>
+          <div class="mascarabinario">
+            <input type="text" maxlength="3" name=""  value="0" id="mascaraA_Binario" onkeypress="return soloNumeros(event)">
+            <input type="text" maxlength="3" name=""  value="0" id="mascaraB_Binario" onkeypress="return soloNumeros(event)">
+            <input type="text" maxlength="3" name=""  value="0" id="mascaraC_Binario" onkeypress="return soloNumeros(event)">
+            <input type="text" maxlength="3" name=""  value="0" id="mascaraD_Binario" onkeypress="return soloNumeros(event)">
+          </div>
+        </div>
+      </div>
+      <div class="contenedorsumaBinario">
+        <h3>Direcccion de SeubRed (Binario)</h3>
+        <div class="sumaBinario">
+          <input type="text" maxlength="3" name=""  value="0" id="respuestaA_Binario" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name=""  value="0" id="respuestaB_Binario" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name=""  value="0" id="respuestaC_Binario" onkeypress="return soloNumeros(event)">
+          <input type="text" maxlength="3" name=""  value="0" id="respuestaD_Binario" onkeypress="return soloNumeros(event)">
+        </div>
+      </div>
+      <div class="contenedor3"></div>
+    </div>
+  </div>
+
+
+
+  <!-- 
+contenedorpadre>3contenedores
+contenedor1>contenedor>cabezera>h3>Direccion IP+contenedor ips>inputs
+contenedor1>contenedor>cabezera>h3>Mascara de SubRed+contenedor mascara>inputs
+contenedor2>contenedor>cabezera>h3>Direccion IP (Binarios)+contenedor host>inputs
+contenedor2>contenedor>cabezera>h3>Ultimo Host+contenedor host>inputs
+
+
+
+contenor3>contenedor>cabezera>h3>Direccion IP (Binarios)+contenedor host>inputs
+ -->
+
+<script src="validacionessimples.js"></script>
+  <script src="main.js"></script>
+  <script src="verificarNumeros.js"></script>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script>
+   
+  </script>
+</body>
+</html>

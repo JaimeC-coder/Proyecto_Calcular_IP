@@ -1,0 +1,104 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ p{
+    display: inline-block;
+ }
+ body{
+    background-color: #b6b3b3;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+.encavezado{
+    text-align: center;
+    font-size: 25px;
+}
+.contenedorgeneral{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+
+}
+.contenedorgeneral > *{
+    flex-basis: 50%;
+    width: 50%;
+}
+   
+.contenedor1 ,.contenedor2{
+    width: 50%;
+    background-color: rgb(165, 157, 157);
+    padding: 20px;
+
+    flex-direction: row;
+    
+}
+
+.contenedorIP, .contenedorMascaras{
+   
+    padding: 10px;
+    
+}
+.contenedorIP{
+
+ display: flex;
+ flex-wrap: nowrap;
+ flex-direction: column;
+
+ 
+ }
+ .contenedorIP h3{
+    width: 100%;
+ }
+
+ input[type="text"]{
+  flex-direction: row;
+    width:15%;
+    height: 15px;
+
+    border: 1px solid #ccc;
+    padding: 5px;
+
+}
+
+.cuerpo1{
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.contenedor1, .contenedor2{
+    width: 48%;
+    height: auto;
+    background-color: rgb(219, 219, 219);
+    padding: 20px;
+    
+}
+.contenedor1 .contenedorips, .contenedor2 .contenedorMascara{
+   display: flex;
+    flex-direction: row;
+}
+.contenedorips input  , .contenedorMascara input {
+    width: 30%;
+    height: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+}
+.contenedorMascara {
+    margin:0 10px;
+}
+.cuerpo2{
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
