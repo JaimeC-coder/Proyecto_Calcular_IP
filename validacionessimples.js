@@ -1,5 +1,7 @@
+
+
 octetoA.addEventListener("focus", function () {
-  return octetoA.value = "";
+  return (octetoA.value = "");
 });
 octetoA.addEventListener("blur", function () {
   if (octetoA.value != 0) {
@@ -88,16 +90,13 @@ mascaraD.addEventListener("blur", function () {
     return (mascaraD.value = 0);
   }
 });
-
-//---------------------------------------------
-
-octetoA.addEventListener("keyup", () => { 
-  if ( octetoA.value =="") {
+octetoA.addEventListener("keyup", () => {
+  if (octetoA.value == "") {
     octetoA.value = "";
   } else {
     if (octetoA.value > 255) {
       octetoA.value = 255;
-       
+
       principal(octetoA);
     } else {
       principal(octetoA);
@@ -105,12 +104,12 @@ octetoA.addEventListener("keyup", () => {
   }
 });
 octetoB.addEventListener("keyup", () => {
-  if (octetoB.value=="") {
+  if (octetoB.value == "") {
     octetoB.value = "";
   } else {
     if (octetoB.value > 255) {
       octetoB.value = 255;
-       
+
       principal(octetoB);
     } else {
       principal(octetoB);
@@ -118,12 +117,12 @@ octetoB.addEventListener("keyup", () => {
   }
 });
 octetoC.addEventListener("keyup", () => {
-  if (octetoC.value=="") {
+  if (octetoC.value == "") {
     octetoC.value = "";
   } else {
     if (octetoC.value > 255) {
       octetoC.value = 255;
-       
+
       principal(octetoC);
     } else {
       principal(octetoC);
@@ -131,12 +130,12 @@ octetoC.addEventListener("keyup", () => {
   }
 });
 octetoD.addEventListener("keyup", () => {
-  if (octetoD.value=="") {
+  if (octetoD.value == "") {
     octetoD.value = "";
   } else {
     if (octetoD.value > 255) {
       octetoD.value = 255;
-       
+
       principal(octetoD);
     } else {
       principal(octetoD);
@@ -144,26 +143,25 @@ octetoD.addEventListener("keyup", () => {
   }
 });
 mascara.addEventListener("keyup", () => {
-  if (mascara.value=="") {
+  if (mascara.value == "") {
     mascara.value = "";
   } else {
-    if (mascara.value > 255) {
-      mascara.value = 255;
-       
-      principal(mascara);
+    if (mascara.value > 30) {
+      mascara.value = 30;
+
+      llenarmascara(mascara.value);
     } else {
-      principal(mascara);
+      llenarmascara(mascara.value);
     }
   }
 });
-
-mascaraA.addEventListener("keyup", () => { 
-  if ( mascaraA.value =="") {
+mascaraA.addEventListener("keyup", () => {
+  if (mascaraA.value == "") {
     mascaraA.value = "";
   } else {
     if (mascaraA.value > 255) {
       mascaraA.value = 255;
-       
+
       principal(mascaraA);
     } else {
       principal(mascaraA);
@@ -171,12 +169,12 @@ mascaraA.addEventListener("keyup", () => {
   }
 });
 mascaraB.addEventListener("keyup", () => {
-  if (mascaraB.value=="") {
+  if (mascaraB.value == "") {
     mascaraB.value = "";
   } else {
     if (mascaraB.value > 255) {
       mascaraB.value = 255;
-       
+
       principal(mascaraB);
     } else {
       principal(mascaraB);
@@ -184,12 +182,12 @@ mascaraB.addEventListener("keyup", () => {
   }
 });
 mascaraC.addEventListener("keyup", () => {
-  if (mascaraC.value=="") {
+  if (mascaraC.value == "") {
     mascaraC.value = "";
   } else {
     if (mascaraC.value > 255) {
       mascaraC.value = 255;
-       
+
       principal(mascaraC);
     } else {
       principal(mascaraC);
@@ -197,41 +195,47 @@ mascaraC.addEventListener("keyup", () => {
   }
 });
 mascaraD.addEventListener("keyup", () => {
-  if (mascaraD.value=="") {
+  if (mascaraD.value == "") {
     mascaraD.value = "";
   } else {
     if (mascaraD.value > 255) {
       mascaraD.value = 255;
-       
+
       principal(mascaraD);
     } else {
       principal(mascaraD);
     }
   }
 });
+function respuesta() {
+  var octetoA_Binario  = $("#octetoA_Binario").val();
+  var octetoB_Binario  = $("#octetoB_Binario").val();
+  var octetoC_Binario  = $("#octetoC_Binario").val();
+  var octetoD_Binario  = $("#octetoD_Binario").val();
+  var mascaraA_Binario = $("#mascaraA_Binario").val();
+  var mascaraB_Binario = $("#mascaraB_Binario").val();
+  var mascaraC_Binario = $("#mascaraC_Binario").val();
+  var mascaraD_Binario = $("#mascaraD_Binario").val();
+
+  if (mascaraD_Binario.length > 0) {
+   comparar(octetoA_Binario,mascaraA_Binario ,"A");
+   comparar(octetoB_Binario,mascaraB_Binario, "B");
+   comparar(octetoC_Binario,mascaraC_Binario, "C");
+   comparar(octetoD_Binario,mascaraD_Binario, "D");
+  }
+  broadcast();
+}
 //---------------------------------------------
 function soloNumeros(e) {
-    key = e.keyCode || e.which;
-    teclado = String.fromCharCode(key);
-    numero = "0123456789";
-    especiales = "8-37-38-46";
-    tecla_especial = false;
-    for (var i in especiales) {
-      if (key == especiales[i]) tecla_especial = true;
-    }
-    if (numero.indexOf(teclado) == -1 && !tecla_especial) {
-      return false;
-    }
+  key = e.keyCode || e.which;
+  teclado = String.fromCharCode(key);
+  numero = "0123456789";
+  especiales = "8-37-38-46";
+  tecla_especial = false;
+  for (var i in especiales) {
+    if (key == especiales[i]) tecla_especial = true;
+  }
+  if (numero.indexOf(teclado) == -1 && !tecla_especial) {
+    return false;
+  }
 }
-/*
-10111111111111
-
-128+64+32+16+8+4+2+1=255
-64+32+16+8+4+2+1=127
-32+16+8+4+2+1=63
-16+8+4+2+1=31
-8+4+2+1=15
-4+
-2
-1
-*/
