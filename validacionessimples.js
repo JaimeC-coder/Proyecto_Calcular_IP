@@ -1,5 +1,3 @@
-
-
 octetoA.addEventListener("focus", function () {
   return (octetoA.value = "");
 });

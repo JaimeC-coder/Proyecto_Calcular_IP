@@ -30,7 +30,6 @@ function llenarmascara(valor) {
 
 function separar(valor) {
   mascaraA_Binario = valor.slice(0, 8);
-
   mascaraB_Binario = valor.slice(8, 16);
   mascaraC_Binario = valor.slice(16, 24);
   mascaraD_Binario = valor.slice(24, 32);
@@ -38,21 +37,16 @@ function separar(valor) {
   mascaraB=parseInt(mascaraB_Binario,2);
   mascaraC=parseInt(mascaraC_Binario,2);
   mascaraD=parseInt(mascaraD_Binario,2);
-
-
   $("#mascaraA").val(mascaraA);
   $("#mascaraB").val(mascaraB);
   $("#mascaraC").val(mascaraC);
   $("#mascaraD").val(mascaraD);
-
   $("#mascaraA_Binario").val(mascaraA_Binario);
   $("#mascaraB_Binario").val(mascaraB_Binario);
   $("#mascaraC_Binario").val(mascaraC_Binario);
   $("#mascaraD_Binario").val(mascaraD_Binario);
   respuesta();
-
 }
-
 
 function comparar (octeto,mascara,valor){
   var auxocta = octeto;
@@ -87,11 +81,8 @@ function comparar (octeto,mascara,valor){
 
 
 
-// function hola(hola) {
-  //     let num = 100;
-  //     console.log(num.toString(2).padStart(8, "0"));
 
-// }
+
 //funcion para validar los datos ingresados con los del array y que si esta en el array se escriba el mas sercano que se encuentre
 
 // function buscar(array, valores) {

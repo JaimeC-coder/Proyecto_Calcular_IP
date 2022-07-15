@@ -19,14 +19,11 @@ function principal(octeto) {
 }
 
 function convertirBinario(valor, nombar) {
-
   var binario = parseInt(valor).toString(2).padStart(8,"0");
   $("#" + nombar + "_Binario").val(binario);
 }
 
-
-
-function compararArrays(octeto,octeto1){//compara dos arrays  cambiar por string
+function compararArrays(octeto,octeto1){
     var respuesta;
 
     for (var i = 0; i < 8; i++) {
@@ -35,7 +32,6 @@ function compararArrays(octeto,octeto1){//compara dos arrays  cambiar por string
     }
     console.log(respuesta);
     console.log(respuesta.join(""));
-
 }
 
 
